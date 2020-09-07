@@ -19,7 +19,5 @@
         cidr_ip: 0.0.0.0/0
   register: security_group
 
-- set_fact:
-    public-webdmz: "{{ security_group.group.id }}"
 
 
