@@ -1,0 +1,3 @@
+# Tasks for creating the EC2 Instances
+---
+- include: provision-ec2

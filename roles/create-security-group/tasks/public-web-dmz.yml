@@ -1,0 +1,26 @@
+# Public Web DMZ security group
+---
+- name: Create A Public WebDMZ SG
+  ec2_group:
+    name: Public Web DMZ
+    description: Public Web DMZ Security group
+    vpc_id: "{{ vpc_id }}"
+    region: "{{ region }}"
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+    rules:
+      - proto: tcp
+        ports:
+          - 80
+        cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        ports: 
+          - 22
+        cidr_ip: 0.0.0.0/0
+  register: security_group
+
+- name: Storing to a variable
+  set_facts:
+    public-webdmz: "{{ security_group.group.id }}"
+
+

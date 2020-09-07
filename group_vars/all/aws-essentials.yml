@@ -1,0 +1,20 @@
+# AWS Environment essential variables
+
+# Specify Region
+region: ap-southeast-1
+
+# VPC ID
+vpc_id: vpc-06ffd18e66772c60b
+
+# VPC Subnet ID
+vpc_subnet_id: subnet-0ca7837ead94f5d56
+
+# Specify image ID
+image_id: ami-0003a0dda9240a8da
+
+# Specify instance type
+instance_type: t2.micro
+
+# Specify KeyPair
+key_name: MyDevOpsLaptopKey
+

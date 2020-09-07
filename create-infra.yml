@@ -1,2 +1,8 @@
 # Create Infra in AWS using ANSIBLE modules
 ---
+- name: Creating the Infra
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - create-security-group
+    - create-ec2 

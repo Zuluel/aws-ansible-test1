@@ -1,0 +1,17 @@
+# Create EC2 Instance
+---
+- name: Creating Ec2 instance
+  ec2:
+    image: "{{ image_id }}"
+    wait: yes
+    instance_type: "{{ instance_type }}"
+    region: "{{ region }}"
+    group_id: "{{ public-webdmz }}"
+    key_name: "{{ key_name }}"
+    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    assign_public_ip: yes
+    count_tags:
+      Name: frontend
+    exact_count: 1
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
