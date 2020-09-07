@@ -10,7 +10,7 @@
     key_name: "{{ key_name }}"
     vpc_subnet_id: "{{ vpc_subnet_id }}"
     assign_public_ip: yes
-    count_tags:
+    instance_tags:      
       Name: frontend
     exact_count: 1
     aws_access_key: "{{ aws_access_key }}"
